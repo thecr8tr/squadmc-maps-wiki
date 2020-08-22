@@ -84,6 +84,10 @@ Usually the levels of the exported heightmap are very broad, making the image pr
 
 **Important!** Don't forget to add this information to the mapdata object in the repository! This information is very important, so that SquadMC can properly convert the pixel values back to the actual height.
 
+The image should now look like this:
+
+![heightmap_cropped_leveled](https://user-images.githubusercontent.com/9431420/90963182-022e7000-e4b6-11ea-87fe-ee5a4d2bd4d5.jpg)
+
 13. convert to rgb
 Now that we have optimized the image levels, next is the color range. We could just export the grayscale jpg, but that is kind of a waste of information. You see, if we would export the image in grayscale, we only have one "color" to reflect the height. This means we only have 256 height "units", as each color can go from 0 to 255.
 Additionally, each pixel would contain the same information, e.g. gray would be red = 127, green = 127, blue = 127. So we have three times the same information per pixel, which bloats the final file size.
