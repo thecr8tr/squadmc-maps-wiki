@@ -133,7 +133,9 @@ The heightmap should now look like this
 
 ### scale the heightmap to 4096x4096
 All minimaps have a size of 4096x4096, and we want to put the heightmap on top of it, so we scale the heightmap to match the minimap dimensions.
-**NOTE:** Based on the map you're extracting, the heightmap might be smaller or larger than the minimap
+
+**NOTE:** Based on the map you're extracting, the heightmap might be smaller or larger than the minimap.
+
 **NOTE:** If the heightmap is not square, make scale it in a way so that the longest side becomes 4096px.
 
 ![image](https://user-images.githubusercontent.com/9431420/90961750-541dc880-e4ab-11ea-89aa-6c9f4a5bc4c6.png)
