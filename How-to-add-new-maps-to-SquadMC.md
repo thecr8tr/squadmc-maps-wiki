@@ -102,14 +102,75 @@ The image should now look like this:
 
 ![image](https://user-images.githubusercontent.com/9431420/90961730-33ee0980-e4ab-11ea-9c40-9640ef09cbf6.png)
 
-16. undo curves
+## generate minimap layer tiles
+Now that we have the heightmap itself done, we can worry about the actual map layer. For this we have to take the exported minimap, and split it into tiles using a custom GIMP filter.
 
-17. scale down to 4096
+The filter can be found here: https://gist.github.com/Endebert/917e566846c482a8a3696ef406434ad1
+
+1. open minimap in GIMP
+
+2. execute the "leaflet" filter
+
+![image](https://user-images.githubusercontent.com/9431420/90962568-79153a00-e4b1-11ea-9e65-901c31517441.png)
+
+![image](https://user-images.githubusercontent.com/9431420/90962578-86322900-e4b1-11ea-8dd1-23ebe20c04a2.png)
+
+## generate heightmap layer tiles
+In order for users to also have a heightmap layer to look at (as we don't use the lashkar.jpg file as an overlay), we have to create another set of tiles just like we did with the minimap, but now we overlay the heightmap on top of the minimap first.
+
+1. open heightmap in GIMP
+
+2. crop the heightmap like we did before
+
+3. set the levels like we did before
+
+4. convert heightmap to rgb like we did before
+
+5. set curves (2)
+Just like we changed the image curves in a previous step, we do almost the same here, but additionally, we set the green channel to cover the mid range.
+
+![image](https://user-images.githubusercontent.com/9431420/90961821-d3ab9780-e4ab-11ea-842a-8118009b698e.png)
+
+The heightmap should now look like this
+
+![heightmap_cropped_leveled_cuved](https://user-images.githubusercontent.com/9431420/90962814-2d639000-e4b3-11ea-9c3b-08be5b012b84.jpg)
+
+6. scale the heightmap to 4096x4096
+All minimaps have a size of 4096x4096, and we want to put the heightmap on top of it, so we scale the heightmap to match the minimap dimensions.
+**NOTE:** Based on the map you're extracting, the heightmap might be smaller or larger than the minimap
+**NOTE:** If the heightmap is not square, make scale it in a way so that the longest side becomes 4096px.
 
 ![image](https://user-images.githubusercontent.com/9431420/90961750-541dc880-e4ab-11ea-89aa-6c9f4a5bc4c6.png)
 
 ![image](https://user-images.githubusercontent.com/9431420/90961760-65ff6b80-e4ab-11ea-81e0-e8b6b7415a0f.png)
 
-18. set curves (2)
+7. open minimap in GIMP
 
-![image](https://user-images.githubusercontent.com/9431420/90961821-d3ab9780-e4ab-11ea-842a-8118009b698e.png)
+8. copy&paste heightmap into minimap and make it a new layer
+
+9. set the layer mode of the heightmap layer to _**Overlay**_
+
+![image](https://user-images.githubusercontent.com/9431420/90962882-bb3f7b00-e4b3-11ea-83e8-298bf965bdac.png)
+
+The image should now look like this:
+
+![heightmap_cropped_leveled_cuved_overlay_interim](https://user-images.githubusercontent.com/9431420/90963040-fa220080-e4b4-11ea-8e6b-e023a92f87fc.jpg)
+
+10. convert the underlying minimap to grayscale
+To improve contrast, we will now convert the minimap itself to grayscale. I usually use the "Color to Grey" function, as it gives better results than using "Desaturate".
+
+So, make sure to have the minimap layer selected, and use the "Color to Grey" function:
+
+![image](https://user-images.githubusercontent.com/9431420/90962932-15404080-e4b4-11ea-9d56-f46135069ca3.png)
+
+Here are the "Color to Grey" setttings that I use:
+
+![image](https://user-images.githubusercontent.com/9431420/90962965-62241700-e4b4-11ea-9430-051e85cc154c.png)
+
+The image should now look like this:
+
+![heightmap_cropped_leveled_cuved_overlay](https://user-images.githubusercontent.com/9431420/90963007-b62efb80-e4b4-11ea-8aee-d07da2ec8075.jpg)
+
+
+11. generate tiles
+Just like we did with the minimap before, we are now creating tiles with the custom "leaflet" filter from our image
