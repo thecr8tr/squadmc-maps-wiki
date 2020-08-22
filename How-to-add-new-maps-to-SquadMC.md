@@ -180,4 +180,6 @@ Just like we did with the minimap before, we are now creating tiles with the cus
 ## And we're done! 🎉 
 Now add the heightmap jpg, as well as the minimap and heightmap layer tiles to the squadmc_maps codebase (you specify the paths in the mapdata object. make sure they match with the files locations!) and commit them under a new branch.
 
-I'm looking forward to your pull requests!
+Finally, add a new pull request for the new map, just like this one: https://github.com/Endebert/squadmc-maps/pull/20
+
+**I'm looking forward to your pull requests! **
