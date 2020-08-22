@@ -179,4 +179,4 @@ Finally, create a new pull request for the new map, just like this one: https://
 
 And that's it, we're done! 🎉 
 
-**I'm looking forward to your pull requests! **
+**I'm looking forward to your pull requests!**
