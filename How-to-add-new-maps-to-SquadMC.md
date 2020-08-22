@@ -29,7 +29,7 @@ The following steps will guide you to add the map "Lashkar Valley" to SquadMC.
 8. add entry in squadmc_maps -> mapdata.js
 ![image](https://user-images.githubusercontent.com/9431420/90961524-f0df6680-e4a9-11ea-8e94-ea27427147fd.png)
 9. execute "npm run info"
-``
+```
 Lashkar Valley
     map dimensions: [4334,4334], scale: [1,1,1.5]
     orig heightmap: 4336x4336
