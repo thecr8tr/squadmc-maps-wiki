@@ -4,10 +4,10 @@ The following steps will guide you to add the map "Lashkar Valley" to SquadMC.
 
 ## Contents
 
-1. Export minimap & heightmap from Squad SDK, together with their meta information
-2. create minimap layer
-3. create heightmap.jpg
-4. create heightmap layer
+* [Export minimap & heightmap from Squad SDK](#export-minimap--heightmap-from-squad-sdk)
+* create minimap layer
+* create heightmap.jpg
+* create heightmap layer
 
 ## Export minimap & heightmap from Squad SDK
 
