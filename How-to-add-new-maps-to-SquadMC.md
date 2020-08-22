@@ -4,7 +4,7 @@ The following steps will guide you to add the map "Lashkar Valley" to SquadMC.
 
 ## Export minimap & heightmap from Squad SDK
 
-### Open Squad SDK
+### open Squad SDK
    * it will be needed for a later step
 
 ### export minimap
@@ -29,14 +29,14 @@ The following steps will guide you to add the map "Lashkar Valley" to SquadMC.
 
 ![image](https://user-images.githubusercontent.com/9431420/90961289-1cf9e800-e4a8-11ea-9d67-31e1e3c6029d.png)
 
-## Add map entry to squadmc_maps repository
+## Add map entry to squadmc_maps
 Now that we have all necessary information extracted from the Squad SDK, let's add that information to the repository.
 
 ### add entry in squadmc_maps -> mapdata.js
 
 ![image](https://user-images.githubusercontent.com/9431420/90961524-f0df6680-e4a9-11ea-8e94-ea27427147fd.png)
 
-## Create lashkar.jpg (heightmap)
+## create lashkar.jpg (heightmap)
 Right now, the heightmap looks pretty grey:
 
 ![heightmap_raw](https://user-images.githubusercontent.com/9431420/90963083-5422c600-e4b5-11ea-8c62-6cdeca1cbcd7.jpg)
