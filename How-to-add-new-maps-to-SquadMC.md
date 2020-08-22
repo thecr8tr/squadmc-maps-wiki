@@ -79,7 +79,7 @@ The image should now look like this:
 ### convert to rgb
 Now that we have optimized the image levels, next is the color range. We could just export the grayscale jpg, but that is kind of a waste of information. You see, if we would export the image in grayscale, we only have one "color" to reflect the height. This means we only have 256 height "units", as each color can go from 0 to 255.
 Additionally, each pixel would contain the same information, e.g. gray would be red = 127, green = 127, blue = 127. So we have three times the same information per pixel, which bloats the final file size.
-Instead, we will change the image curves so that instead of going from black to white, we go from blue to black to red, while green is always 0. This way we have now split the original height scale from 256 units to 512 units!
+Instead, we will change the image curves so that instead of going from black to white, we go from blue to black to red, while green is always 0. This way we have now doubled the height "units" from 256 to 512!
 
 ![image](https://user-images.githubusercontent.com/9431420/90961665-dbb70780-e4aa-11ea-9610-f34641bd8cf4.png)
 
