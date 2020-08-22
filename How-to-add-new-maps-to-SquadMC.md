@@ -170,9 +170,11 @@ The image should now look like this:
 ### generate tiles
 Just like we did with the minimap before, we are now creating tiles with the custom "leaflet" filter from our image
 
-## And we're done! 🎉 
+## Almost done!
 Now add the heightmap jpg, as well as the minimap and heightmap layer tiles to the squadmc_maps codebase (you specify the paths in the mapdata object. make sure they match with the files locations!) and commit them under a new branch.
 
 Finally, add a new pull request for the new map, just like this one: https://github.com/Endebert/squadmc-maps/pull/20
+
+And that's it, we're done! 🎉 
 
 **I'm looking forward to your pull requests! **
