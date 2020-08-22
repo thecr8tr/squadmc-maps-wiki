@@ -49,9 +49,13 @@ Now that we have all necessary information extracted from the Squad SDK, let's a
 ![image](https://user-images.githubusercontent.com/9431420/90961524-f0df6680-e4a9-11ea-8e94-ea27427147fd.png)
 
 ## Create lashkar.jpg (heightmap)
-Now that the information has been added, we can run a npm script to tell us how to modify the raw heightmap in GIMP, so that it eventually overlaps properly with the minimap.
+Right now, the heightmap looks pretty grey:
 
-Additionally, we want to optimize the original heightmap as much as possible, as the original heightmap is way too large for mobile devices to handle.
+![heightmap_raw](https://user-images.githubusercontent.com/9431420/90963083-5422c600-e4b5-11ea-8c62-6cdeca1cbcd7.jpg)
+
+What we want to do now is crop the heightmap to the required dimensions, and optimize the contrast.
+
+As we have added all the minimap & heightmap information to the code, we can run a npm script to tell us how to modify the raw heightmap in GIMP, so that it eventually overlaps properly with the minimap.
 
 1. execute "npm run info"
 ```
@@ -71,14 +75,14 @@ Now we just follow the steps as described, i.e. change the canvas to 4334x4334 w
 ![image](https://user-images.githubusercontent.com/9431420/90961583-369c2f00-e4aa-11ea-890c-d881d004ae2d.png)
 
 12. adjust levels
-Now the heightmap is cropped correctly, we want to optimize the level range.
-Usually the levels of the exported heightmap are very broad, and only a small part of it is relevant to us. We therefore "crop" the initial levels to the range that we want.
-
-**Important!** Don't forget to add this information to the mapdata object in the repository! This information is very important, so that SquadMC can properly convert the pixel values back to the actual height.
+Now the heightmap is cropped correctly, so the next step is optimizing contrast.
+Usually the levels of the exported heightmap are very broad, making the image pretty "grey", as only a small part of the greyscale range is relevant to us. We therefore "crop" the initial image levels to the range that we want.
 
 ![image](https://user-images.githubusercontent.com/9431420/90961785-83ccd080-e4ab-11ea-92fe-eaacebd1d553.png)
 
 ![image](https://user-images.githubusercontent.com/9431420/90961638-a4e0f180-e4aa-11ea-82d3-fce982ab8708.png)
+
+**Important!** Don't forget to add this information to the mapdata object in the repository! This information is very important, so that SquadMC can properly convert the pixel values back to the actual height.
 
 13. convert to rgb
 Now that we have optimized the image levels, next is the color range. We could just export the grayscale jpg, but that is kind of a waste of information. You see, if we would export the image in grayscale, we only have one "color" to reflect the height. This means we only have 256 height "units", as each color can go from 0 to 255.
